@@ -7,7 +7,8 @@ def nominaEntity(item) -> dict:
         "correo":item["correo"],
         "direccion":item["direccion"],
         "cargo":item["cargo"],
-        "salario":item["salario"]
+        "salario":item["salario"],
+        "productos": item.get("productos", [])  
     }
 def nominasEntity(entity) -> list:
     return [nominaEntity(item) for item in entity]
